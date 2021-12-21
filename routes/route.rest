@@ -1,0 +1,56 @@
+GET http://localhost:3000/image
+###
+
+GET http://localhost:3000/user
+###
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+   "email": "12@email.com"
+}
+
+###
+DELETE http://localhost:3000/user
+Content-Type: application/json
+
+{
+   "email": "1@email.com"
+}
+
+###
+POST http://localhost:3000/rating
+Content-Type: application/json
+
+{
+   "email": "1@email.com",
+   "rating": 2,
+   "ImgUrl": "https://apod.nasa.gov/apod/image/2112/LeonardMeteor_Poole_960a.jpg"
+}
+###
+
+PATCH http://localhost:3000/rating
+Content-Type: application/json
+
+{
+   "email": "1@email.com",
+   "rating": 2,
+   "ImgUrl": "https://apod.nasa.gov/apod/image/2112/LeonardMeteor_Poole_960a.jpg"
+}
+###
+DELETE http://localhost:3000/rating
+Content-Type: application/json
+
+{
+   "email": "12@email.com",
+   "ImgUrl": "https://apod.nasa.gov/apod/image/2112/LeonardMeteor_Poole_960.jpg"
+
+}
+###
+GET http://localhost:3000/rating
+Content-Type: application/json
+
+{
+   "email": "1@email.com"
+}
